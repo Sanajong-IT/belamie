@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint",
     "test": "vitest run --reporter=verbose",
     "test:watch": "vitest",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "lhci:ci": "lhci autorun"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -27,6 +30,8 @@
     "vitest": "^1.6.0",
     "next-sitemap": "^4.2.3",
     "@cloudflare/next-on-pages": "^1.11.4",
-    "wrangler": "^3.70.0"
+    "wrangler": "^3.70.0",
+    "@playwright/test": "^1.46.0",
+    "@lhci/cli": "^0.13.0"
   }
 }
